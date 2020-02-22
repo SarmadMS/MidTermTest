@@ -58,9 +58,6 @@ module scenes
 
         }
 
-        public Randomizer(){
-
-        }
 
         
     }
