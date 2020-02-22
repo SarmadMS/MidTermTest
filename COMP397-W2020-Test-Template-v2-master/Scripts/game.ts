@@ -19,6 +19,11 @@ let Game = (function(){
         {id:"nextButton", src:"./Assets/images/nextButton.png"},
         {id:"backButton", src:"./Assets/images/backButton.png"},
         {id:"rollButton", src:"./Assets/images/rollButton.png"},
+        {id:"oneDice", src: "./Assets/images/1.png"},
+        {id:"twoDice", src: "./Assets/images/2.png"},
+        {id:"threeDice", src: "./Assets/images/3.png"},
+        {id:"fourDice", src: "./Assets/images/4.png"},
+        {id:"fiveDice", src: "./Assets/images/5.png"},
         {id:"ocean", src:"./Assets/images/ocean.gif"},
         {id:"plane", src:"./Assets/images/plane.png"}
     ];

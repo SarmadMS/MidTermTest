@@ -8,7 +8,10 @@ module scenes
         private _rollLabel: objects.Label;
         private _rollLabel2: objects.Label;
         private _rollNumber1: number;
+        private _rollText1: string;
+        private _rollText2: string;
         private _rollNumber2:  number;
+        
         
 
         // PUBLIC PROPERTIES
@@ -35,6 +38,7 @@ module scenes
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
             
             
+            
              this.Main();
         }        
         
@@ -51,14 +55,26 @@ module scenes
 
             this._rollButton.on("click", ()=>{
 
-                this._rollLabel = new objects.Label("5",  "20px", "Consolas", "#000000", 160, 270, true);
+                //randomizing Dice number
+                this._rollNumber1 = util.Mathf.RandomRange(1,6);
+                this._rollNumber2 = util.Mathf.RandomRange(1,6);
+
+                //Converting number to string
+                this._rollText1 = this._rollNumber1.toString();
+                this._rollText2 = this._rollNumber1.toString();
+                
+                
+                //Replacing Label
+                this._rollLabel = new objects.Label(this._rollText1,  "20px", "Consolas", "#000000", 320, 270, true);
+                this._rollLabel2 = new objects.Label(this._rollText2,  "20px", "Consolas", "#000000", 320, 270, true);
+
 
             });
 
 
         }
 
-
+        
         
     }
 }

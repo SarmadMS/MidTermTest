@@ -42,10 +42,16 @@ var scenes;
             this.addChild(this._rollLabel2);
             this.addChild(this._rollButton);
             this._rollButton.on("click", function () {
-                _this._rollLabel = new objects.Label("5", "20px", "Consolas", "#000000", 160, 270, true);
+                //randomizing Dice number
+                _this._rollNumber1 = util.Mathf.RandomRange(1, 6);
+                _this._rollNumber2 = util.Mathf.RandomRange(1, 6);
+                //Converting number to string
+                _this._rollText1 = _this._rollNumber1.toString();
+                _this._rollText2 = _this._rollNumber1.toString();
+                //Replacing Label
+                _this._rollLabel = new objects.Label(_this._rollText1, "20px", "Consolas", "#000000", 320, 270, true);
+                _this._rollLabel2 = new objects.Label(_this._rollText2, "20px", "Consolas", "#000000", 320, 270, true);
             });
-        };
-        Play.prototype.Randomizer = function () {
         };
         return Play;
     }(objects.Scene));
