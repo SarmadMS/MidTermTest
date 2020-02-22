@@ -32,7 +32,8 @@ module scenes
            this._rollLabel = new objects.Label("0",  "20px", "Consolas", "#000000", 160, 270, true);
            this._rollLabel2 = new objects.Label("0",  "20px", "Consolas", "#000000", 480, 270, true);
             // buttons
-            //this._rollButton = new objects.Button(config.Game.ASSETS.getResult("roll"), 320, 430, true);
+            this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
+            
             
              this.Main();
         }        
