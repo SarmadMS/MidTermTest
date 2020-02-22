@@ -16,7 +16,6 @@ var scenes;
 (function (scenes) {
     var Play = /** @class */ (function (_super) {
         __extends(Play, _super);
-        // PRIVATE INSTANCE MEMBERS
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
         function Play() {
@@ -28,11 +27,25 @@ var scenes;
         // PUBLIC METHODS
         //initialize and instatiate
         Play.prototype.Start = function () {
+            //instaniate a new text object
+            this._rollLabel = new objects.Label("0", "20px", "Consolas", "#000000", 160, 270, true);
+            this._rollLabel2 = new objects.Label("0", "20px", "Consolas", "#000000", 480, 270, true);
+            // buttons
+            //this._rollButton = new objects.Button(config.Game.ASSETS.getResult("roll"), 320, 430, true);
             this.Main();
         };
         Play.prototype.Update = function () {
         };
         Play.prototype.Main = function () {
+            var _this = this;
+            this.addChild(this._rollLabel);
+            this.addChild(this._rollLabel2);
+            this.addChild(this._rollButton);
+            this._rollButton.on("click", function () {
+                _this._rollLabel = new objects.Label("5", "20px", "Consolas", "#000000", 160, 270, true);
+            });
+        };
+        Play.prototype.Randomizer = function () {
         };
         return Play;
     }(objects.Scene));
